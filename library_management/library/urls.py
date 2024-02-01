@@ -19,3 +19,12 @@ urlpatterns = [
     path('borrowed_books/return/', ReturnBookView.as_view(), name='return-book'),
     path('borrowed_books/', ListAllBorrowedBooksView.as_view(), name='list-all-borrowed-books'),
 ]
+'''    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'healthapp',
+        'USER': 'root',
+        'PASSWORD': 'Laptop@123',
+        'HOST':'localhost',
+        'PORT':'3306',
+    }
+}'''
