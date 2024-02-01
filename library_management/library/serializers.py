@@ -5,7 +5,16 @@ from .models import User, Book, BookDetails, BorrowedBooks
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = '__all__'
+        fields = ['UserID', 'Name', 'Email', 'MembershipDate', 'password']
+        extra_kwargs = {'password': {'write_only': True}}
+        
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['UserID', 'Name', 'Email', 'MembershipDate', 'password']
+        extra_kwargs = {'password': {'write_only': True}}
+
 
 class BookSerializer(serializers.ModelSerializer):
     class Meta:

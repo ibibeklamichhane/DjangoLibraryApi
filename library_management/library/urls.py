@@ -1,4 +1,5 @@
 from django.urls import path
+from rest_framework.authtoken.views import obtain_auth_token
 from .views import (
     CreateUserView, ListAllUsersView, GetUserByIDView,
     AddNewBookView, ListAllBooksView, GetBookByIDView, AssignUpdateBookDetailsView,
@@ -18,6 +19,9 @@ urlpatterns = [
     path('borrowed_books/borrow/', BorrowBookView.as_view(), name='borrow-book'),
     path('borrowed_books/return/', ReturnBookView.as_view(), name='return-book'),
     path('borrowed_books/', ListAllBorrowedBooksView.as_view(), name='list-all-borrowed-books'),
+
+    path('api/token/', obtain_auth_token, name='obtain-token'),
+    path('api/token/refresh/', obtain_auth_token, name='refresh-token'),
 ]
 '''    'default': {
         'ENGINE': 'django.db.backends.mysql',
