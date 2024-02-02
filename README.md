@@ -59,7 +59,7 @@ Update your Django project settings (library_management/settings.py) to use MySQ
 python manage.py migrate
 ```
 
-##Token Authentication 
+## Token Authentication 
 In settings.py
 ```REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
@@ -68,7 +68,8 @@ In settings.py
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
     ],
-}```
+}
+```
 
 # Get Token for your superuser username
 ```python manage.py drf_create_token <your_username>```
