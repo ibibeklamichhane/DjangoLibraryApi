@@ -9,9 +9,11 @@ Add Django REST Framework using ```pip install djangorestframework```
 You have to notify django of the new installation in django_project/settings.py
 
 in the INSTALLED_APPS section add rest_framework,library app
-```seetings.py```
-```"rest_framework", # new
-libraryapp ```
+
+``` settings.py
+   "rest_framework",
+    libraryapp
+```
 
 
 
@@ -43,6 +45,7 @@ Update your Django project settings (library_management/settings.py) to use MySQ
         },
     }
 }
+
 ```
 
 ## Create MySQL Database
@@ -77,32 +80,21 @@ In settings.py
 
 
 ##Create User:
-```curl -X POST -H "Content-Type: application/json" -d '{"Name": "John Doe", "Email": "john@example.com", "password": "your_password"}' http://localhost:8000/api/users/create/
-```
+```curl -X POST -H "Content-Type: application/json" -d '{"Name": "John Doe", "Email": "john@example.com", "password": "your_password"}' http://localhost:8000/api/users/create/ ```
 
 ##List All Users:
-```curl -X GET -H "Authorization: Token YOUR_TOKEN_HERE" http://localhost:8000/api/users/
-
-```
+```curl -X GET -H "Authorization: Token YOUR_TOKEN_HERE" http://localhost:8000/api/users/```
 
 ##Get User by ID:
-```curl -X GET -H "Authorization: Token YOUR_TOKEN_HERE" http://localhost:8000/api/users/1/
-
-```
+```curl -X GET -H "Authorization: Token YOUR_TOKEN_HERE" http://localhost:8000/api/users/1/```
 
 ##Add New Book:
-```curl -X POST -H "Content-Type: application/json" -H "Authorization: Token YOUR_TOKEN_HERE" -d '{"Title": "Sample Book", "ISBN": "1234567890", "PublishedDate": "2022-01-30", "Genre": "Fiction"}' http://localhost:8000/api/books/create/
+```curl -X POST -H "Content-Type: application/json" -H "Authorization: Token YOUR_TOKEN_HERE" -d '{"Title": "Sample Book", "ISBN": "1234567890", "PublishedDate": "2022-01-30", "Genre": "Fiction"}' http://localhost:8000/api/books/create/```
 
-
-```
 ##Get book by id
-```curl -X GET -H "Authorization: Token YOUR_TOKEN_HERE" http://localhost:8000/api/books/1/
-
-
-```
+```curl -X GET -H "Authorization: Token YOUR_TOKEN_HERE" http://localhost:8000/api/books/1/```
 ##List All Borrowed Books:
-```curl -X GET -H "Authorization: Token YOUR_TOKEN_HERE" http://localhost:8000/api/borrowed_books/
-```
+```curl -X GET -H "Authorization: Token YOUR_TOKEN_HERE" http://localhost:8000/api/borrowed_books/```
 
 
 #You can use other urls to available in same ways
