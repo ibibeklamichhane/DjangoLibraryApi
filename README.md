@@ -70,13 +70,11 @@ In settings.py
     ],
 }```
 
-##Get Token for your superuser username
-```python manage.py drf_create_token <your_username>
-```
+# Get Token for your superuser username
+```python manage.py drf_create_token <your_username>```
 # Retrieve Token
 
-```Generated token for user 'your_username': 0123456789abcdef0123456789abcdef01234567
-```
+```Generated token for user 'your_username': 0123456789abcdef0123456789abcdef01234567```
 
 
 # Create User:
