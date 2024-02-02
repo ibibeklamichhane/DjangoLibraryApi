@@ -1,4 +1,4 @@
-###Library API Development using the Django REST Framework
+## Library API Development using the Django REST Framework
 
 Create a virtualenv ```python3 -m venv env```
 
@@ -17,7 +17,7 @@ in the INSTALLED_APPS section add rest_framework,library app
 
 
 
-###Serelizers
+## Serelizers
 
 A ```Serializer``` translates complex data like querysets and model instances into a format that is easy to consume over the internet, typically JSON. It is also possible to “deserialize” data, literally the same process in reverse, whereby JSON data is first validated and then transformed into a dictionary.
 
@@ -54,7 +54,7 @@ Update your Django project settings (library_management/settings.py) to use MySQ
 
 ```CREATE DATABASE your_database_name;```
 
-##Apply migrations
+# Apply migrations
 ```python manage.py makemigrations
 python manage.py migrate
 ```
@@ -73,29 +73,29 @@ In settings.py
 ##Get Token for your superuser username
 ```python manage.py drf_create_token <your_username>
 ```
-##Retrieve Token
+# Retrieve Token
 
 ```Generated token for user 'your_username': 0123456789abcdef0123456789abcdef01234567
 ```
 
 
-##Create User:
+# Create User:
 ```curl -X POST -H "Content-Type: application/json" -d '{"Name": "John Doe", "Email": "john@example.com", "password": "your_password"}' http://localhost:8000/api/users/create/ ```
 
-##List All Users:
+# List All Users:
 ```curl -X GET -H "Authorization: Token YOUR_TOKEN_HERE" http://localhost:8000/api/users/```
 
-##Get User by ID:
+# Get User by ID:
 ```curl -X GET -H "Authorization: Token YOUR_TOKEN_HERE" http://localhost:8000/api/users/1/```
 
-##Add New Book:
+# Add New Book:
 ```curl -X POST -H "Content-Type: application/json" -H "Authorization: Token YOUR_TOKEN_HERE" -d '{"Title": "Sample Book", "ISBN": "1234567890", "PublishedDate": "2022-01-30", "Genre": "Fiction"}' http://localhost:8000/api/books/create/```
 
-##Get book by id
+# Get book by id
 ```curl -X GET -H "Authorization: Token YOUR_TOKEN_HERE" http://localhost:8000/api/books/1/```
-##List All Borrowed Books:
+# List All Borrowed Books:
 ```curl -X GET -H "Authorization: Token YOUR_TOKEN_HERE" http://localhost:8000/api/borrowed_books/```
 
 
-#You can use other urls to available in same ways
+# You can use other urls to available in same ways
 
