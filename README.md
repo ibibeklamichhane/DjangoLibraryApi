@@ -47,6 +47,11 @@ Update your Django project settings (library_management/settings.py) to use MySQ
 }
 
 ```
+# With these models, you have established the specified attributes and relationships:
+
+1-M relationship between User and BorrowedBooks.
+1-1 relationship between Book and BookDetails.
+1-M relationship between User and BorrowedBooks.
 
 ## Create MySQL Database
 
